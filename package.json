@@ -13,6 +13,16 @@
   ],
   "dependencies": {
     "fs-extra": "^0.26.3",
-    "yeoman-generator": "^0.22.2"
-  }
+    "yeoman-generator": "^0.22.2",
+    "yosay": "^1.1.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anikdas/generator-xprscouch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anikdas/generator-xprscouch/issues"
+  },
+  "homepage": "https://github.com/anikdas/generator-xprscouch#readme"
 }

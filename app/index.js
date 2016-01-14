@@ -1,6 +1,7 @@
 'use strict';
 var fs = require('fs-extra');
 var generators = require('yeoman-generator');
+var yosay = require('yosay');
 
 module.exports = generators.Base.extend({
     constructor: function () {
@@ -17,6 +18,7 @@ module.exports = generators.Base.extend({
     },
     createBase: function () {
         var g = this;
+        console.log(yosay('Ello! Welcome to my XPRS couch generator! Now it\'s time to chill while I do all the heavy lifting!'));
         console.log('copying file...');
         fs.copy(g.sourceRoot()+'/app', g.destinationPath(), function (err) {
             if (err){
