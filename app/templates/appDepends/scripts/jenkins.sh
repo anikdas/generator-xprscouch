@@ -1,0 +1,1 @@
+sh deploy-<%= appName %>.sh
