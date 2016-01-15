@@ -11,6 +11,7 @@ describe('xprscouch', function () {
             done();
         });
         it('generates app files', function (done) {
+            setTimeout(done, 5000);
             var deps = [
                 [helpers.createDummyGenerator(), 'xprscouch:router'],
                 [helpers.createDummyGenerator(), 'xprscouch:model']
