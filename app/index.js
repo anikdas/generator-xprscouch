@@ -44,7 +44,7 @@ module.exports = generators.Base.extend({
                     g.fs.copyTpl(
                         g.templatePath('appDepends/'+item),
                         g.destinationPath(item),
-                        { appName: g.appName}
+                        {appName: g.appName}
                     );
                 });
                 cb();
