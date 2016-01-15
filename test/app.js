@@ -38,6 +38,7 @@ describe('xprscouch', function () {
                     'views/error.ejs',
                     'views/index.ejs'
                 ]);
+                done();
             })
                 .withOptions({ 'skip-install': 'true', 'skip-welcome-message':'true'})    // Mock options passed in
                 .withArguments(['foo'])      // Mock the arguments
