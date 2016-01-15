@@ -4,46 +4,48 @@ var path = require('path');
 var helpers = require('yeoman-test');
 var assert = require('yeoman-assert');
 
-describe('xprscouch:router', function () {
-    beforeEach(function (done) {
-        helpers
-            .run(require.resolve('../app'))
-            .withGenerators([
-                require.resolve('../router'),
-                require.resolve('../model')
-            ])
-            .withArguments('foo')
-            .on('end', done);
-    });
+describe('xprscouch', function () {
+    describe('when using app generaor', function(){
+        before(function (done) {
 
-    it('generates a new router', function () {
-        assert.file('test/spec/routes/foo.js');
-    });
-});
-
-describe('default settings', function () {
-    beforeEach(function (done) {
-        this.angular.on('end', done);
-    });
-
-    it('generates base files', function () {
-        assert.file(getDefaultFilesForAppPath('app'));
-        assert.file([
-            '.gitignore',
-            'Gruntfile.js',
-            'app.js',
-            'config.js',
-            'init.js',
-            'package.json',
-            'processes.json',
-            'bin/www',
-            'models/foo.js',
-            'public/images',
-            'public/javascripts',
-            'stylesheets/style.css',
-            'routes/foo.js',
-            'views/error.ejs',
-            'views/index.ejs'
-        ]);
+            done();
+        });
+        it('generates app files', function (done) {
+            var deps = [
+                [helpers.createDummyGenerator(), 'xprscouch:router'],
+                [helpers.createDummyGenerator(), 'xprscouch:model']
+            ];
+            helpers.run(path.join( __dirname, '../app'), function(){
+                helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
+                    if (err) {
+                        return done(err);
+                    }
+                });
+                assert.file([
+                    '.gitignore',
+                    'Gruntfile.js',
+                    'app.js',
+                    'config.js',
+                    'init.js',
+                    'package.json',
+                    'processes.json',
+                    'bin/www',
+                    'models/foo.js',
+                    'public/images',
+                    'public/javascripts',
+                    'stylesheets/style.css',
+                    'routes/foo.js',
+                    'views/error.ejs',
+                    'views/index.ejs'
+                ]);
+            })
+                .withOptions({ 'skip-install': 'true', 'skip-welcome-message':'true'})    // Mock options passed in
+                .withArguments(['foo'])      // Mock the arguments
+                .withGenerators(deps)
+                .on('ready', function (generator) {
+                    // This is called right before `generator.run()` is called
+                })
+                .on('end', done);
+        });
     });
 });

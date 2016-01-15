@@ -4,20 +4,20 @@ var path = require('path');
 var helpers = require('yeoman-test');
 var assert = require('yeoman-assert');
 
-describe('xprscouch:router', function () {
-    describe('when using router generator', function(){
+describe('xprscouch:model', function () {
+    describe('when using model generator', function(){
         before(function (done) {
             done();
         });
-        it('generates router', function (done) {
-            helpers.run(path.join( __dirname, '../router'), function(){
+        it('generates model', function (done) {
+            helpers.run(path.join( __dirname, '../model'), function(){
                 helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
                     if (err) {
                         return done(err);
                     }
                 });
                 assert.file([
-                    'routes/foo.js'
+                    'models/foo.js'
                 ]);
             })
                 .withArguments(['foo'])      // Mock the arguments

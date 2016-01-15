@@ -36,7 +36,11 @@ module.exports = generators.Base.extend({
                     g.destinationPath('routes/'+routerName+'.js'),
                     { database: routerName}
                 );
-                var data = fs.readFileSync(g.destinationPath('app.js'), 'utf8');
+                try{
+                    var data = fs.readFileSync(g.destinationPath('app.js'), 'utf8');
+                }catch (e){
+                    return;
+                }
                 var lines = data.split(/\r?\n/);
                 var newFileLines = [];
                 lines.forEach(function (line, lineNo) {
@@ -50,13 +54,6 @@ module.exports = generators.Base.extend({
                 });
                 fs.writeFileSync(g.destinationPath('app.js'), newFileLines.join('\n'));
                 console.log('router '+routerName +' created');
-                //fs.copy(g.templatePath('index.js'), g.destinationPath('routes/'+routerName+'.js'), function (err) {
-                //    if (err){
-                //        return console.error(err);
-                //    }else{
-                //
-                //    }
-                //});
             }
         });
     }

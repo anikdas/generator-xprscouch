@@ -16,7 +16,9 @@ module.exports = generators.Base.extend({
         }
         this.option('skip-install');
         this.option('skip-install-message');
-        console.log(yosay('Ello! Welcome to my XPRS couch generator! Now it\'s time to chill while I do all the heavy lifting!'));
+        this.option('skip-welcome-message');
+        if(!this.options['skip-welcome-message'])
+            console.log(yosay('Ello! Welcome to my XPRS couch generator! Now it\'s time to chill while I do all the heavy lifting!'));
         // And you can then access it later on this way; e.g. CamelCased
     },
     createBase: function () {
