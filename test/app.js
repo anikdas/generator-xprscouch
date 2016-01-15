@@ -12,7 +12,6 @@ describe('xprscouch', function () {
             done();
         });
         it('generates app files', function (done) {
-            this.timeout(10000);
             var deps = [
                 [helpers.createDummyGenerator(), 'xprscouch:router'],
                 [helpers.createDummyGenerator(), 'xprscouch:model']
@@ -40,7 +39,7 @@ describe('xprscouch', function () {
                     'views/error.ejs',
                     'views/index.ejs'
                 ]);
-                done();
+                setTimeout(done, 10000);
             })
                 .withOptions({ 'skip-install': 'true', 'skip-welcome-message':'true'})    // Mock options passed in
                 .withArguments(['foo'])      // Mock the arguments
