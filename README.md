@@ -14,7 +14,9 @@ Make a directory and cd into it
 mkdir project-name && cd $_
 ```
 
-Run `yo xprscouch app-name` passing the app-name(required)
+Run `yo xprscouch [app-name]`
+
+`app-name` is optional
 
 Run `grunt` for preview. By default the app starts on port 3000. You can change the port for different environments (e.g. `development`, `production`) in `config.js` file located in the app root folder.
 
