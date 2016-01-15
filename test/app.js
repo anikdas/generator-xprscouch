@@ -6,12 +6,13 @@ var assert = require('yeoman-assert');
 
 describe('xprscouch', function () {
     describe('when using app generaor', function(){
+        this.timeout(15000);
         before(function (done) {
 
             done();
         });
         it('generates app files', function (done) {
-            setTimeout(done, 5000);
+            this.timeout(10000);
             var deps = [
                 [helpers.createDummyGenerator(), 'xprscouch:router'],
                 [helpers.createDummyGenerator(), 'xprscouch:model']
