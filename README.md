@@ -1,4 +1,5 @@
-# Yeoman express couch generator 
+# Yeoman express couch generator
+[![npm version](https://badge.fury.io/js/generator-xprscouch.svg)](https://badge.fury.io/js/generator-xprscouch)
 [![Dependency Status](https://david-dm.org/anikdas/generator-xprscouch.svg)](https://david-dm.org/anikdas/generator-xprscouch)
 [![Build Status](https://travis-ci.org/anikdas/generator-xprscouch.svg?branch=master)](https://travis-ci.org/anikdas/generator-xprscouch)
 >Yeoman generator for express with couchdb lets you rapidly build CRUD MVC application with best practices

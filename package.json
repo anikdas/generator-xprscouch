@@ -21,7 +21,8 @@
     "istanbul": "0.3.5",
     "mocha": "*",
     "yeoman-assert": "^2.1.1",
-    "yeoman-test": "^1.0.0"
+    "yeoman-test": "^1.0.0",
+    "coveralls": "^2.11.6"
   },
   "repository": {
     "type": "git",
