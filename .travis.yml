@@ -3,6 +3,7 @@ node_js:
   - "4.1"
   - "4.0"
   - "0.11"
+  - "0.12"
   - "iojs"
 bundler_args:
   --retry 3
