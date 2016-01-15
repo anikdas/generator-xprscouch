@@ -19,6 +19,12 @@ module.exports = generators.Base.extend({
         console.log(yosay('Ello! Welcome to my XPRS couch generator! Now it\'s time to chill while I do all the heavy lifting!'));
         // And you can then access it later on this way; e.g. CamelCased
     },
+    createBase: function () {
+        var done = this.async();
+        var g = this;
+        fs.copySync(g.sourceRoot()+'/app', g.destinationPath());
+        done();
+    },
     askFor: function(){
         var cb = this.async();
         var g= this;
@@ -47,16 +53,8 @@ module.exports = generators.Base.extend({
             cb();
         }
     },
-    createBase: function () {
-        var g = this;
-        fs.copy(g.sourceRoot()+'/app', g.destinationPath(), function (err) {
-            if (err){
-                return console.error(err);
-            }else{
-            }
-        });
-    },
     projectFiles: function () {
+        var done = this.async();
         var g = this;
         if(g.appName){
             console.log('appname: '+g.appName);
@@ -71,6 +69,7 @@ module.exports = generators.Base.extend({
                 );
             });
         }
+        done();
     },
     final: function () {
         var g =this;

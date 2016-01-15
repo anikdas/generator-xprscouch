@@ -35,6 +35,7 @@ yo xprscouch app-name
 
 ##Router
 Creates a new express router
+
 Command:
 ```
 yo xprscouch:router router-name
@@ -42,6 +43,7 @@ yo xprscouch:router router-name
 
 ##Model
 Creates a new model in `model` folder (Models are like database APIs for routers). Models use [cradle](https://github.com/flatiron/cradle) CouchDB client
+
 Command:
 ```
 yo xprscouch:model model-name [database-name]
