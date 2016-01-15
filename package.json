@@ -4,7 +4,8 @@
   "description": "This is a express with couchdb MVC app generator",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "cover-test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*"
   },
   "author": "Anik Das",
   "license": "MIT",
@@ -17,6 +18,7 @@
     "yosay": "^1.1.0"
   },
   "devDependencies": {
+    "istanbul": "0.3.5",
     "mocha": "*",
     "yeoman-assert": "^2.1.1",
     "yeoman-test": "^1.0.0"
