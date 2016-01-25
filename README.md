@@ -1,4 +1,6 @@
 # Yeoman express couch generator
+[![NPM](https://nodei.co/npm/generator-xprscouch.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/generator-xprscouch/)
+
 [![npm version](https://badge.fury.io/js/generator-xprscouch.svg)](https://badge.fury.io/js/generator-xprscouch)
 [![Dependency Status](https://david-dm.org/anikdas/generator-xprscouch.svg)](https://david-dm.org/anikdas/generator-xprscouch)
 [![Build Status](https://travis-ci.org/anikdas/generator-xprscouch.svg?branch=master)](https://travis-ci.org/anikdas/generator-xprscouch)
