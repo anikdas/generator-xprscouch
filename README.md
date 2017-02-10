@@ -5,6 +5,7 @@
 [![Dependency Status](https://david-dm.org/anikdas/generator-xprscouch.svg)](https://david-dm.org/anikdas/generator-xprscouch)
 [![Build Status](https://travis-ci.org/anikdas/generator-xprscouch.svg?branch=master)](https://travis-ci.org/anikdas/generator-xprscouch)
 [![Coverage Status](https://coveralls.io/repos/anikdas/generator-xprscouch/badge.svg?branch=master&service=github)](https://coveralls.io/github/anikdas/generator-xprscouch?branch=master)
+[![bitHound Overall Score](https://www.bithound.io/github/anikdas/generator-xprscouch/badges/score.svg)](https://www.bithound.io/github/anikdas/generator-xprscouch)
 >Yeoman generator for express with couchdb lets you rapidly build CRUD MVC application with best practices
 
 ###Installation and Usage
